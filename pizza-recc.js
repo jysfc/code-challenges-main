@@ -41,13 +41,13 @@ const customer = {
 };
 
 let recommendations = [];
-pizzas.forEach((topping) => {
-   if (topping.toppings.id === customer.favoriteToppings.id) {
-      recommendations = topping.name;
+pizzas.forEach((pizza) => {
+   if (pizza.toppings.id === customer.favoriteToppings.id) {
+      recommendations = recommendations.concat(pizza);
    }
    return recommendations;
 });
 
 // Fix this to provide an array of all the pizzas this customer will like.
-
-console.log(recommendations);
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+console.log(JSON.stringify(recommendations, null, 3));
