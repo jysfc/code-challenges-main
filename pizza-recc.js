@@ -40,14 +40,35 @@ const customer = {
    ],
 };
 
-let recommendations = [];
+// let recommendations = [];
+// pizzas.forEach((pizza) => {
+//    if (pizza.toppings.id === customer.favoriteToppings.id) {
+//       recommendations = recommendations.concat(pizza);
+//    }
+//    return recommendations;
+// });
+
+// const recommendations = pizzas.map((pizza) => {
+//    const recPizza = { ...pizza };
+//    if (recPizza.toppings === customer.favoriteToppings) {
+//       recommendations = recommendations.concat(recPizza);
+//    }
+//    return recPizza;
+// });
+
+let toppings = [];
 pizzas.forEach((pizza) => {
-   if (pizza.toppings.id === customer.favoriteToppings.id) {
-      recommendations = recommendations.concat(pizza);
-   }
-   return recommendations;
+   toppings = pizza.toppings;
+   toppings.filter((topping) => {
+      if (
+         topping.id.includes("4e2eb71d-8207-46c4-bc64-12a4855337ee") ||
+         topping.id.includes("9c5eb777-3e1c-4fc1-91a2-cee96e69d4c1")
+      ) {
+         console.log(pizza.name);
+      }
+   });
 });
 
 // Fix this to provide an array of all the pizzas this customer will like.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-console.log(JSON.stringify(recommendations, null, 3));
+//console.log("this is the rec", JSON.stringify(recommendations, null, 3));
