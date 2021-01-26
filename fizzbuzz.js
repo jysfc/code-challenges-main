@@ -8,14 +8,15 @@
 
 function getFizzBuzz(max) {
    // YOUR CODE HERE
-   let getFizzBuzz = [];
-   for (let i = 0; i < 100; i++) {
+   for (i = 1; i < max; i++) {
       if (i % 3 === 0 && i % 5 === 0) {
-         return "Fizzbuzz";
-      } else if (i % 5 === 0) {
-         return "Buzz";
+         console.log("Fizzbuzz");
       } else if (i % 3 === 0) {
-         return "Fizz";
+         console.log("Fizz");
+      } else if (i % 5 === 0) {
+         console.log("Buzz");
+      } else {
+         console.log(i);
       }
    }
 }
